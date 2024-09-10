@@ -1,6 +1,8 @@
 # React Tic-Tac-Toe
 
-A simple Tic-Tac-Toe game built using React and Webpack.
+A simple Tic-Tac-Toe game built using React and Vite.
+
+<img src="public/tic-tac-toe.png" alt="tic tac toe" height="400"/>
 
 ### Table of Contents
 
