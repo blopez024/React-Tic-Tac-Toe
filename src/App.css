@@ -3,20 +3,21 @@ body {
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
   background-color: #f0f0f0;
   margin: 0;
+  height: 100vh;
 }
 
 .game {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center the board and list horizontally */
+  width: 100%;
 }
 
 .game-board {
-  margin-bottom: 20px;
+  margin-top: 20px; /* Adds space below the board for the move list */
 }
 
 .status {
@@ -45,7 +46,20 @@ body {
 }
 
 .game-info {
-  margin-left: 20px;
+  width: 100%;
+  max-width: 400px; /* Limits the width of the move list */
+  margin-top: 20px; /* Adds space between the board and move list */
+  max-height: 700px; /* Limits the height of the move list if it grows too large */
+  overflow-y: auto; /* Allows the move list to scroll if it exceeds max height */
+}
+
+.game-info ol {
+  list-style: none; /* Remove default list styling */
+  padding-left: 0; /* Remove extra padding */
+}
+
+.game-info li {
+  margin-bottom: 10px; /* Adds space between each move */
 }
 
 .game-info button {
@@ -58,12 +72,9 @@ body {
   font-size: 1rem;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  width: 100%; /* Make buttons take the full width of the container */
 }
 
 .game-info button:hover {
   background-color: #45a049;
-}
-
-ol {
-  padding-left: 20px;
 }
